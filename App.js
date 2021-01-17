@@ -9,7 +9,6 @@ class ListComponent extends Component {
   };
 
   fetchFeed() {
-    console.log("Fetching this entire feed like yeah")
     fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then((json) => {
@@ -119,10 +118,10 @@ class InfoComponent extends Component {
 
   render() {
     return(
-      <View style={{backgroundColor: "grey", margin: 12, width: "60%", height: "16%", justifyContent: "center", alignItems: 'center'}}>
-        <Text style={{fontSize: 18}}>{this.state.userName}</Text>
-        <Text style={{fontSize: 18}}>{this.state.userEmail}</Text>
-        <Text style={{fontSize: 18}}>{this.state.userPhone}</Text>
+      <View style={{backgroundColor: "grey", margin: 12, width: "80%", height: "16%", justifyContent: "center", alignItems: 'center'}}>
+        <Text style={{fontSize: 18}}>{"Name: " + this.state.userName}</Text>
+        <Text style={{fontSize: 18}}>{"E-mail: " + this.state.userEmail}</Text>
+        <Text style={{fontSize: 18}}>{"Phone: " +this.state.userPhone}</Text>
       </View>
     )
   }
